@@ -1,8 +1,29 @@
-const invoice = 150;
-const stock = 100;
-const message =
-  invoice > 100
-    ? "На складе недостаточно товаров!"
-    : "Заказ оформлен, с вами свяжется менеджер";
+const calculateEngravingPrice = function (message, pricePerWord) {
+  // твой код
+  return message.split(" ").length * pricePerWord;
+};
 
-console.log(message);
+/*
+ * Вызовы функции для проверки работоспособности твоей реализации.
+ */
+console.log(
+  calculateEngravingPrice(
+    "Proin sociis natoque et magnis parturient montes mus",
+    10
+  )
+); // 80
+
+console.log(
+  calculateEngravingPrice(
+    "Proin sociis natoque et magnis parturient montes mus",
+    20
+  )
+); // 160
+
+console.log(
+  calculateEngravingPrice("Donec orci lectus aliquam est magnis", 40)
+); // 240
+
+console.log(
+  calculateEngravingPrice("Donec orci lectus aliquam est magnis", 20)
+); // 120

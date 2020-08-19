@@ -1,38 +1,19 @@
-const countryName = "ямайка";
-
-const CANCELED_BY_USER = "Отменено пользователем!";
-const NO_DELIVERY = "В выбранную страну доставка недоступна.";
-const CHINA = "Китай";
-const AUSTRALIA = "Австралия";
-const INDIA = "Индия";
-const JAMAICA = "Ямайка";
-let message;
-let price = 0;
-let country;
-if (countryName === null) {
-  message = CANCELED_BY_USER;
-} else {
-  country = countryName[0].toUpperCase() + countryName.toLowerCase().slice(1);
-  switch (country) {
-    case CHINA:
-      price = 100;
-      break;
-    case AUSTRALIA:
-      price = 170;
-      break;
-    case INDIA:
-      price = 80;
-      break;
-    case JAMAICA:
-      price = 120;
-      break;
-    default:
-      message = NO_DELIVERY;
+function checkForSpam(str) {
+  "use strict";
+  if (
+    str.toLowerCase().includes("sale") ||
+    str.toLowerCase().includes("spam")
+  ) {
+    return true;
   }
+
+  return false;
 }
 
-if (price > 0) {
-  message = `Доставка в ${country} будет стоить ${price} кредитов`;
-}
+console.log(checkForSpam("Latest technology news")); // false
 
-console.log(message);
+console.log(checkForSpam("JavaScript weekly newsletter")); // false
+
+console.log(checkForSpam("Get best sale offers now!")); // true
+
+console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
