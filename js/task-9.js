@@ -33,7 +33,6 @@ function addLogin(allLogins, login) {
     }
   } else {
     message = ERROR;
-    // break;
   }
   return message;
 }

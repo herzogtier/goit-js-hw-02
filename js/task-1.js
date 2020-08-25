@@ -13,7 +13,6 @@
 // logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
 const getItemsString = function (array) {
   "use strict";
-  // Write code under this line
   let result = "";
 
   for (let i = 0; i < array.length; i += 1) {
