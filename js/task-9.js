@@ -1,20 +1,24 @@
 function isLoginValid(login, min = 4, max = 16) {
   // Write code under this line
-  if (login.length >= min && login.length <= max) {
-    return true;
-  } else {
-    return false;
-  }
+  const logIn = login.length >= min && login.length <= max ? true : false;
+  return logIn;
+  // if (login.length >= min && login.length <= max) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
 }
 
 function isLoginUnique(allLogins, login) {
   "use strict";
   // Write code under this line
-  if (allLogins.includes(login)) {
-    return false;
-  } else {
-    return true;
-  }
+  const logUniq = allLogins.includes(login) ? false : true;
+  // if (allLogins.includes(login)) {
+  //   return false;
+  // } else {
+  //   return true;
+  // }
+  return logUniq;
 }
 
 function addLogin(allLogins, login) {
